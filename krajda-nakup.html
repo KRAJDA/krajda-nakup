@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRAJDA Nákup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0077cc;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: orange;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkorange;
+    }
+    .note {
+      margin-top: 20px;
+      background-color: #e6f7ff;
+      padding: 15px;
+      border-left: 5px solid #0077cc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KRAJDA Nákup</h1>
+    <p>Rychlé nákupy z města až k vám domů – Semily a okolí</p>
+  </header>
+  <div class="container">
+    <h2>Pošli mi svůj nákup</h2>
+    <form action="https://formspree.io/f/xvgaoggq" method="POST">
+      <label for="name">Jméno:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail nebo telefon:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="address">Adresa doručení:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="shop">Obchod (např. Billa, Penny):</label>
+      <input type="text" id="shop" name="shop" required>
+
+      <label for="items">Co chceš koupit:</label>
+      <textarea id="items" name="items" rows="5" required></textarea>
+
+      <label for="payment">Jak mi pošleš peníze (např. hotově, Revolut):</label>
+      <input type="text" id="payment" name="payment" required>
+
+      <button type="submit">Odeslat nákup</button>
+    </form>
+
+    <div class="note">
+      <strong>Upozornění:</strong> K finální ceně nákupu se připočítává 10 % jako poplatek za doručení a službu.
+    </div>
+  </div>
+</body>
+</html>
